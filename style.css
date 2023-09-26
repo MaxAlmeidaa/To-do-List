@@ -183,7 +183,7 @@ li {
   border: none;
   box-shadow: 2px 4px rgb(182, 174, 174);
   padding-left: 5px;
-  width: 15rem;
+  width: 12rem;
 }
 
 .backItem {
@@ -216,9 +216,9 @@ li {
 }
 
 .spanItem {
-  display: block;
+  display:block;
   left: 0;
-  width: 80%;
+  width: 70%;
   height: auto;
   clear: both;
 }
