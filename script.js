@@ -20,14 +20,18 @@ function removeAll(item) {
   number.innerText = count;
 }
 function verifyInput(txt) {
-  if (txt == "") {
+  if(!txt.trim()){
+      alert("Você esta tentando inserir um item vazio")
+      input.value = "";
+    }else {
     input.placeholder = "O campo esta vazio! Digite Algo!";
-  } else {
-    input.placeholder = "Digite algo!";
+    input.placeholder = "Digite algo";
     addTask(txt);
     input.value = "";
-  }
 }
+}
+
+
 
 function addTask(inputValue) {
   const checkItem = document.createElement("input");
@@ -52,7 +56,6 @@ function addTask(inputValue) {
   spanItem.textContent = inputValue;
   itemLi.id = "itemEdited";
   editTask.className = "editTask";
-
   ulList.appendChild(itemLi);
   divIcons.appendChild(editTask);
   divIcons.appendChild(backItem);
@@ -128,5 +131,8 @@ function inputNew(txtInput, confirmationItem, span, input, item, check, x) {
     });
   }
 }
+
+
+
 
 btnAddTask.addEventListener("click", () => verifyInput(input.value));
